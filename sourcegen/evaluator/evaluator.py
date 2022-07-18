@@ -1,7 +1,24 @@
-# The Evaluator class here is a modified version of the Evaluator class in
-# https://github.com/Tushar-N/attributes-as-operators/blob/af7395b089ba79fb05307646c95c5b9d0743669c/models/models.py
-# Some modifications are made so that it is compatible with our framework.
+# Copyright (c) 2022 Robert Bosch GmbH Copyright holder of the paper "Overcoming Shortcut Learning in a Target Domain by Generalizing Basic Visual Factors from a Source Domain" accepted at ECCV 2022.
+# All rights reserved.
+###
+# The paper "Overcoming Shortcut Learning in a Target Domain by Generalizing Basic Visual Factors from a Source Domain" accepted at ECCV 2022.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+# This source code is derived from attributes-as-operators
+#   (https://github.com/Tushar-N/attributes-as-operators/blob/af7395b089ba79fb05307646c95c5b9d0743669c/models/models.py)
+# Copyright (c) 2018, licensed under the MIT license,
+# cf. 3rd-party-licenses.txt file in the root directory of this source tree.
 
 import torch
 

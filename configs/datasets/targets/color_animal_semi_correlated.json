@@ -9,8 +9,7 @@
     "comp_params": {
       "root": "/home/asp2abt/workspace/sourcegen/data/targets/color_animal/semi_correlated/diag_vib_train_activations",
       "is_pair_parent_dir": true,
-      "phase": "train",
-      "num_negs": 600
+      "phase": "train"
     }
   },
   "target_val": {

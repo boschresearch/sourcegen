@@ -1,5 +1,24 @@
-# This file is a modified version of https://github.com/Tushar-N/attributes-as-operators/blob/master/data/dataset.py
-# Some modifications are made so that it is compatible with our framework.
+# Copyright (c) 2022 Robert Bosch GmbH Copyright holder of the paper "Overcoming Shortcut Learning in a Target Domain by Generalizing Basic Visual Factors from a Source Domain" accepted at ECCV 2022.
+# All rights reserved.
+###
+# The paper "Overcoming Shortcut Learning in a Target Domain by Generalizing Basic Visual Factors from a Source Domain" accepted at ECCV 2022.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+# This source code is derived from attributes-as-operators
+#   (https://github.com/Tushar-N/attributes-as-operators/blob/master/data/dataset.py)
+# Copyright (c) 2018, licensed under the MIT license,
+# cf. 3rd-party-licenses.txt file in the root directory of this source tree.
 
 import numpy as np
 import torch.utils.data as tdata
@@ -71,19 +90,14 @@ def chunks(l, n):
 class CompositionDataset(tdata.Dataset):
     def __init__(self, root, phase, split='compositional-split',
             subset=False,
-            num_negs=1,
-            pair_dropout=0.0,
             random_seed=2533,
             load_image=True
     ):
         self.root = root
         self.phase = phase
         self.split = split
-        self.num_negs = num_negs
-        self.pair_dropout = pair_dropout
         self.random_state = np.random.RandomState(random_seed)
         self.load_image=load_image
-        self.enable_val_neg = False
 
         self.feat_dim = None
         self.transform = imagenet_transform(phase)
@@ -123,26 +137,8 @@ class CompositionDataset(tdata.Dataset):
             candidates = [attr for (_, attr, obj) in self.train_data if obj==_obj]
             self.train_obj_affordance[_obj] = sorted(list(set(candidates)))
 
-        self.reset_dropout()
-
-    def reset_dropout(self):
         self.sample_indices = list(range(len(self.data)))
         self.sample_pairs = self.train_pairs
-
-        if self.phase == 'train' or self.phase == 'val':
-            shuffled_ind = self.random_state.permutation(len(self.train_pairs))
-            n_pairs = int((1 - self.pair_dropout) * len(self.train_pairs))
-            self.sample_pairs = [
-                self.train_pairs[pi] for pi in shuffled_ind[:n_pairs]
-            ]
-            print('Using {} pairs out of {} pairs right now'.format(
-                n_pairs, len(self.train_pairs)))
-            self.sample_indices = [
-                i for i in range(len(self.data))
-                if (self.data[i][1], self.data[i][2]) in self.sample_pairs
-            ]
-            print('Using {} images out of {} images right now'.format(
-                len(self.sample_indices), len(self.data)))
 
     def get_split_info(self):
         data = torch.load(self.root+'/metadata_{}.t7'.format(self.split))
@@ -192,24 +188,6 @@ class CompositionDataset(tdata.Dataset):
 
         return all_attrs, all_objs, all_pairs, tr_pairs, vl_pairs, ts_pairs
 
-    def sample_negative(self, attr, obj):
-        new_attr, new_obj = self.sample_pairs[self.random_state.choice(len(self.sample_pairs))]
-        if new_attr == attr and new_obj == obj:
-            return self.sample_negative(attr, obj)
-        return (self.attr2idx[new_attr], self.obj2idx[new_obj])
-
-    def sample_affordance(self, attr, obj):
-        new_attr = self.random_state.choice(self.obj_affordance[obj])
-        if new_attr == attr:
-            return self.sample_affordance(attr, obj)
-        return self.attr2idx[new_attr]
-
-    def sample_train_affordance(self, attr, obj):
-        new_attr = self.random_state.choice(self.train_obj_affordance[obj])
-        if new_attr == attr:
-            return self.sample_train_affordance(attr, obj)
-        return self.attr2idx[new_attr]
-
     def __getitem__(self, index):
         index = self.sample_indices[index]
         image, attr, obj = self.data[index]
@@ -222,40 +200,19 @@ class CompositionDataset(tdata.Dataset):
 
         data = [img, self.attr2idx[attr], self.obj2idx[obj], self.pair2idx[(attr, obj)]]
 
-        if self.phase == 'train' or self.enable_val_neg:
-            all_neg_attrs = []
-            all_neg_objs = []
-            for _ in range(self.num_negs):
-                neg_attr, neg_obj = self.sample_negative(attr, obj) # negative example for triplet loss
-                all_neg_objs.append(neg_obj)
-                all_neg_attrs.append(neg_attr)
-            neg_attr = torch.LongTensor(all_neg_attrs)
-            neg_obj = torch.LongTensor(all_neg_objs)
-
-            if self.split == 'compositional-split-correlated':
-                # no affordance in correlated cases
-                data += [neg_attr, neg_obj]
-            else:
-                inv_attr = self.sample_train_affordance(attr, obj)  # attribute for inverse regularizer
-                comm_attr = self.sample_affordance(inv_attr, obj)   # attribute for commutative regularizer
-                data += [neg_attr, neg_obj, inv_attr, comm_attr]
-
         return data
 
     def __len__(self):
         return len(self.sample_indices)
 
-    def set_enable_val_neg(self, x):
-        self.enable_val_neg = x
 
 #------------------------------------------------------------------------------------------------------------------------------------#
 
 
 class CompositionDatasetActivations(CompositionDataset):
-    def __init__(self, root, phase, split, subset=False, num_negs=1, pair_dropout=0.0, random_seed=2533):
+    def __init__(self, root, phase, split, subset=False, random_seed=2533):
         super(CompositionDatasetActivations, self).__init__(
-            root, phase, split, subset=subset, num_negs=num_negs, pair_dropout=pair_dropout,
-            random_seed=random_seed, load_image=False)
+            root, phase, split, subset=subset, random_seed=random_seed, load_image=False)
 
         # precompute the activations -- weird. Fix pls
         feat_file = '{}/features_{}.t7'.format(root, split) #'%s/features.t7'%root

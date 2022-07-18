@@ -55,10 +55,6 @@ class SourceGenTrainer(BaseTrainer):
 
         mean_accumulators = MeanAccumulatorSet()
         for idx, data in tqdm(enumerate(trainloader), desc="Training...", total=len(trainloader)):
-            # ignore unused negative samples
-            data[1][4] = data[1][4][:, 0]
-            data[1][5] = data[1][5][:, 0]
-
             # convert to cuda
             data_source = [d.cuda() for d in data[0]]
             data_target = [d.cuda() for d in data[1]]
@@ -87,7 +83,6 @@ class SourceGenTrainer(BaseTrainer):
         # dataset
         dataset_source = self.dataset_catalog['sources_val'][0][0]
         dataset_target = self.dataset_catalog['target_val'][0]
-        dataset_target.set_enable_val_neg(True)
         dataset = MergedFilledDataset(dataset_source, dataset_target)
 
         # dataloader
@@ -97,10 +92,6 @@ class SourceGenTrainer(BaseTrainer):
 
         mean_accumulators = MeanAccumulatorSet()
         for idx, data in enumerate(valloader):
-            # ignore unused negative samples
-            data[1][4] = data[1][4][:, 0]
-            data[1][5] = data[1][5][:, 0]
-
             # convert to cuda
             data_source = [d.cuda() for d in data[0]]
             data_target = [d.cuda() for d in data[1]]
@@ -248,10 +239,6 @@ class FactorTrainer(SourceGenTrainer):
 
         mean_accumulators = MeanAccumulatorSet()
         for idx, data in tqdm(enumerate(trainloader), desc="Training...", total=len(trainloader)):
-            # ignore unused negative samples
-            data[1][4] = data[1][4][:, 0]
-            data[1][5] = data[1][5][:, 0]
-
             # convert to cuda
             data_source = [d.cuda() for d in data[0]]
             data_target = [d.cuda() for d in data[1]]
