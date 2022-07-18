@@ -1,0 +1,9 @@
+.idea
+__pycache__
+*.pkl
+cache
+*train_activations*
+*val_activations*
+*test_activations*
+*.swp
+outputs

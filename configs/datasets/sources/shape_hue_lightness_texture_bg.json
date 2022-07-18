@@ -1,0 +1,24 @@
+{
+  "sources_train": [
+    {
+      "name": "diag_vib",
+      "activate": true,
+      "params": {
+        "spec_yaml": "/home/asp2abt/workspace/sourcegen/data/sources/shape_hue_lightness_texture_bg/train_c.yaml",
+        "seed": 6937
+      },
+      "root": "/home/asp2abt/workspace/sourcegen/data/sources/shape_hue_lightness_texture_bg/train_activations"
+    }
+  ],
+  "sources_val": [
+    {
+      "name": "diag_vib",
+      "activate": true,
+      "params": {
+        "spec_yaml": "/home/asp2abt/workspace/sourcegen/data/sources/shape_hue_lightness_texture_bg/val_c.yaml",
+        "seed": 6938
+      },
+      "root": "/home/asp2abt/workspace/sourcegen/data/sources/shape_hue_lightness_texture_bg/val_activations"
+    }
+  ]
+}

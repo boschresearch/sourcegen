@@ -1,0 +1,14 @@
+name: sourcegen
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - imageio
+  - matplotlib
+  - pytorch=1.7.1
+  - pytorch-gpu=1.7.1
+  - scikit-image
+  - scikit-learn
+  - scipy
+  - torchvision=0.10.0
+  - tqdm

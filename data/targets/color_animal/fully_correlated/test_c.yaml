@@ -1,0 +1,66 @@
+modes:
+- ratio: 1.
+  spec:
+    bg_color: gray
+    bg_lightness: 
+        - dark
+        - penumbra
+        - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category:
+      - animals test
+      draw_instance: with replacement
+      hue:
+      - red
+      - orange
+      - yellow
+      - green
+      - spring_green
+      - cyan
+      - azure
+      - blue
+      - violet
+      - magenta
+      lightness:
+      - penumbra
+      orientation: upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+tasks:
+- shape
+- hue
+samples: 6000
+shape:
+- 1
+- 64
+- 64

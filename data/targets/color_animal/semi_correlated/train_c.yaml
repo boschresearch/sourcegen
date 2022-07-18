@@ -1,0 +1,789 @@
+modes:
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - red
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 0
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - orange
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 0
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - orange
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 1
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - yellow
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 1
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - yellow
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 2
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - green
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 2
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - green
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 3
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - spring_green
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 3
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - spring_green
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 4
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - cyan
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 4
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - cyan
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 5
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - azure
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 5
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - azure
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 6
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - blue
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 6
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - blue
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 7
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - violet
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 7
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - violet
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 8
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - magenta
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 8
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - magenta
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 9
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+- ratio: 0.05
+  spec:
+    bg_color: gray
+    bg_lightness:
+    - dark
+    - penumbra
+    - bright
+    bg_style: color
+    corruptions: []
+    objs:
+    - category: animals train
+      draw_instance: with replacement
+      hue:
+      - red
+      lightness:
+      - penumbra
+      orientation:
+      - upright
+      position:
+      - center center
+      rotation:
+      - no rotation
+      scale:
+      - small
+      - smaller
+      - normal
+      - larger
+      - large
+      scaling:
+      - no scaling
+      shape:
+      - 9
+      style: color
+      texture:
+      - tiles
+      velocity:
+      - none none
+    questions: []
+    tag: ''
+samples: 30000
+shape:
+- 1
+- 64
+- 64
+tasks:
+- shape
+- hue

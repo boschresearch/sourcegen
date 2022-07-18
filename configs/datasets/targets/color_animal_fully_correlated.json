@@ -1,0 +1,42 @@
+{
+  "target_train": {
+    "name": "diag_vib_composition",
+    "activate": true,
+    "params": {
+      "spec_yaml": "/home/asp2abt/workspace/sourcegen/data/targets/color_animal/fully_correlated/train_c.yaml",
+      "seed": 6937
+    },
+    "comp_params": {
+      "root": "/home/asp2abt/workspace/sourcegen/data/targets/color_animal/fully_correlated/diag_vib_train_activations",
+      "is_pair_parent_dir": true,
+      "phase": "train",
+      "num_negs": 600
+    }
+  },
+  "target_val": {
+    "name": "diag_vib_composition",
+    "activate": true,
+    "params": {
+      "spec_yaml": "/home/asp2abt/workspace/sourcegen/data/targets/color_animal/fully_correlated/val_c.yaml",
+      "seed": 6938
+    },
+    "comp_params": {
+      "root": "/home/asp2abt/workspace/sourcegen/data/targets/color_animal/fully_correlated/diag_vib_val_activations",
+      "is_pair_parent_dir": true,
+      "phase": "val"
+    }
+  },
+  "target_test": {
+    "name": "diag_vib_composition",
+    "activate": true,
+    "params": {
+      "spec_yaml": "/home/asp2abt/workspace/sourcegen/data/targets/color_animal/fully_correlated/test_c.yaml",
+      "seed": 6939
+    },
+    "comp_params": {
+      "root": "/home/asp2abt/workspace/sourcegen/data/targets/color_animal/fully_correlated/diag_vib_test_activations",
+      "is_pair_parent_dir": true,
+      "phase": "test"
+    }
+  }
+}

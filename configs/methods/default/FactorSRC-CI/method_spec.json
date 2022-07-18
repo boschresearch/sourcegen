@@ -1,0 +1,27 @@
+{
+  "model_spec": {
+    "name": "FactorTrainer",
+    "params": {
+      "args": {
+        "latent_dim": 64,
+        "lambda_data_source": 10.0,
+        "lambda_grl": 0.0,
+        "lambda_xpred": 5.0,
+        "isolated_latents": false,
+        "bn_mode": "none"
+      }
+    }
+  },
+  "learning_rule": {
+    "num_epochs": 100,
+    "term_gap_epochs": 20,
+    "lr": 0.001,
+    "wd": 5e-05,
+    "dataloader_spec": {
+      "params": {
+        "batch_size": 512,
+        "num_workers": 8
+      }
+    }
+  }
+}

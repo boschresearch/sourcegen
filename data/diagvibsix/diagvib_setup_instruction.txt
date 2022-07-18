@@ -1,0 +1,7 @@
+1. Download following datasets into this directory:
+    - Animal: non_rigid_shape_A.zip and non_rigid_shape_B.zip from https://sites.google.com/site/xiangbai/animaldataset
+    - Caltech101: caltech101_silhouettes_28_split1.mat from https://people.cs.umass.edu/~marlin/data/caltech101_silhouettes_28_split1.mat
+
+2. Run process.py
+
+3. Assign DATASET_DIR variable in `diagvibsix/dataset/config.py` to the corresponding path where this repository locates.
