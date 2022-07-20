@@ -5,3 +5,6 @@
 2. Run process.py
 
 3. Assign DATASET_DIR variable in `diagvibsix/dataset/config.py` to the corresponding path where this repository locates.
+
+4. For all JSON files under the configs/datasets directory, adapt the values of 'spec_yaml' to match the local path to the repository.
+

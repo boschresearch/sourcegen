@@ -33,7 +33,7 @@ def run_job(method, source_dataset, target_dataset, training_seed):
     # arguments
     repo_dir = os.getcwd()
     method_str = method.replace('/', '-') + '-' + datetime.now().strftime("%Y_%m_%d_%H_%M_%S_%f")
-    result_dir = f'{repo_dir}/outputs/study_fully_correlated_{method_str}'
+    result_dir = f'{repo_dir}/outputs/study_semi_correlated_{method_str}'
     dataset_spec = utils.create_merged_dataset_config(source_dataset, target_dataset, repo_dir)
     method_spec = f'{repo_dir}/configs/methods/{method}/method_spec.json'
 
