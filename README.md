@@ -27,13 +27,13 @@ pip install -e .
 
 We provide python scripts to run studies on the color animal dataset with FactorSRC variations. For fully-correlated setup, the study can be performed by running the script below:
 ```
-python -m studies.run_study_fully_correlated
+python -m sourcegen.studies.run_study_fully_correlated
 ```
 
 Similarly, for semi-correlated setup, the study can be performed by running the script below:
 
 ```
-python -m studies.run_study_semi_correlated
+python -m sourcegen.studies.run_study_semi_correlated
 ```
 
 
