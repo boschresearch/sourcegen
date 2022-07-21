@@ -2,7 +2,7 @@
 
 Shortcut learning occurs when a deep neural network overly relies on spurious correlations in the training dataset in order to solve downstream tasks. Prior works have shown how this impairs the compositional generalization capability of deep learning models. To address this problem, we propose a novel approach to mitigate shortcut learning in uncontrolled target domains. Our approach extends the training set with an additional dataset (the source domain), which is specifically designed to facilitate learning independent representations of basic visual factors. We benchmark our idea on generated target domains where we explicitly control shortcut opportunities as well as real-world target domains. Furthermore, we analyze the effect of different specifications of the source domain and the network architecture on compositional generalization. Our main finding is that leveraging data from a source domain is an effective way to mitigate shortcut learning. By promoting independence across different factors of variation in the learned representations, networks can learn to consider only predictive factors and ignore potential shortcut factors during inference.
 
-For more information about this work, please read our ECCV 2022 paper:
+For more information about this work, please read our [ECCV 2022 paper](https://arxiv.org/abs/2207.10002):
 
 > Saranrittichai, P., Mummadi, C., Blaiotta, C., Munoz, M., & Fischer, V. (2022). Overcoming Shortcut Learning in a Target Domain by Generalizing Basic Visual Factors from a Source Domain. In Proceedings of the European Conference on Computer Vision (ECCV).
 
